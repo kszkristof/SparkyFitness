@@ -55,7 +55,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            codewithcj/sparkyfitness
+            ${{ secrets.DOCKER_USERNAME }}/sparkyfitness
             ghcr.io/${{ github.repository }}-frontend
           tags: |
             type=raw,value=${{ inputs.tag }}
@@ -89,7 +89,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            codewithcj/sparkyfitness_server
+            ${{ secrets.DOCKER_USERNAME }}/sparkyfitness_server
             ghcr.io/${{ github.repository }}-server
           tags: |
             type=raw,value=${{ inputs.tag }}
@@ -123,7 +123,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            codewithcj/sparkyfitness_garmin
+            ${{ secrets.DOCKER_USERNAME }}/sparkyfitness_garmin
             ghcr.io/${{ github.repository }}-garmin
           tags: |
             type=raw,value=${{ inputs.tag }}
@@ -157,7 +157,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            codewithcj/sparkyfitness_mcp
+            ${{ secrets.DOCKER_USERNAME }}/sparkyfitness_mcp
             ghcr.io/${{ github.repository }}-mcp
           tags: |
             type=raw,value=${{ inputs.tag }}
